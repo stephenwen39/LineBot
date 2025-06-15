@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>鮑勃老師 – 每日英文習慣養成</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: #333; }
+    /* hero */
+    .hero { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100vh; background: linear-gradient(135deg,#4facfe 0%,#00f2fe 100%); color: #fff; padding: 0 1rem; }
+    .hero h1 { font-size: clamp(2rem, 5vw + 1rem, 3.5rem); margin-bottom: 2rem; max-width: 900px; }
+    .btn-primary { background: #fff; color: #4facfe; border: none; padding: 0.75rem 2rem; border-radius: 50px; font-size: 1.125rem; cursor: pointer; transition: all .3s ease; }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0,0,0,.15); }
+    /* features */
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
+    .features-heading { grid-column: 1 / -1; text-align: center; font-size: 1.75rem; margin: 0 0 2rem; color: #333; }
+    .feature { background: #f4f6fb; border-radius: 12px; padding: 2rem 1.5rem; box-shadow: 0 4px 10px rgba(0,0,0,.05); transition: transform .3s ease; }
+    .feature:hover { transform: translateY(-5px); }
+    .feature h3 { margin-top: 0; margin-bottom: 1rem; color: #005b96; }
+    /* pricing */
+    .pricing { background: #fff; padding: 4rem 2rem; text-align: center; }
+    .pricing h2 { font-size: 2rem; margin-bottom: 3rem; }
+    .plans { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 900px; margin: 0 auto; }
+    .plan { background: #f4f6fb; border-radius: 12px; padding: 2rem 1.5rem; width: 260px; box-shadow: 0 4px 10px rgba(0,0,0,.05); }
+    .plan h3 { margin: .5rem 0 1rem; color: #005b96; }
+    .price { font-size: 2rem; margin: 1rem 0; color: #4facfe; min-height: 2.5rem; }
+    .plan ul { list-style: none; padding: 0; margin: 0 0 1.5rem; text-align: left; }
+    .plan li { margin-bottom: .5rem; }
+    /* contact */
+    #line-section { background: #f4f6fb; padding: 4rem 2rem; text-align: center; }
+    #line-section h2 { font-size: 1.75rem; margin-bottom: 1.5rem; }
+    #line-section img { width: 200px; height: 200px; object-fit: contain; margin-bottom: 1rem; }
+    a.line-link { display: inline-block; margin-top: .5rem; color: #00c300; font-weight: bold; }
+    @media(max-width: 600px){ .plan{ width: 100%; } }
+  </style>
+</head>
+<body>
+  <!-- Hero -->
+  <header class="hero">
+    <h1>我是鮑勃老師，我幫助你培養每天學英文的習慣</h1>
+    <button class="btn-primary" onclick="document.getElementById('line-section').scrollIntoView({behavior: 'smooth'})">馬上嘗試</button>
+  </header>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <h2 class="features-heading">三大功能幫助你培養學英文的習慣</h2>
+    <div class="feature">
+      <h3>每日單字推送</h3>
+      <p>每天指定時間推送一個單字給你，不喜歡還可以隨時換單字，輕鬆養成英文學習習慣。</p>
+    </div>
+    <div class="feature">
+      <h3>單字複習</h3>
+      <p>隔天自動複習前一天的單字，強化記憶，確保不會忘記。</p>
+    </div>
+    <div class="feature">
+      <h3>AI 造句練習</h3>
+      <p>練習造句，讓 AI 即時糾正錯誤並給予改進建議，立即獲得學習回饋。</p>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="pricing" id="pricing">
+    <h2>定價方案</h2>
+    <div class="plans">
+      <div class="plan">
+        <h3>免費版</h3>
+        <p class="price">$0</p>
+        <ul>
+          <li>每天與 AI 對話限額 5 輪</li>
+          <li>免費試用 5 天</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <h3>專業版</h3>
+        <p class="price">$30 / 月</p>
+        <ul>
+          <li>每日 AI 對話限額 20 輪</li>
+          <li>優先客服支援</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- LINE section -->
+  <section id="line-section">
+    <h2>加入 LINE 官方帳號，立即開始學習</h2>
+    <!-- 請將下方 src 換成你的 QR Code 圖片路徑 -->
+    <img src="line-qrcode.png" alt="LINE 官方帳號 QR Code" />
+    <br/>
+    <a href="https://line.me/你的官方帳號" class="line-link" target="_blank" rel="noopener">→ 點我直接開啟 LINE 加好友</a>
+  </section>
+
+  <footer style="text-align:center;padding:2rem 1rem;font-size:.875rem;color:#777;">
+    © 2025 鮑勃老師 All rights reserved.
+  </footer>
+</body>
+</html>
